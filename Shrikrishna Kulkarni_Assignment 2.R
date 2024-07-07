@@ -23,7 +23,7 @@ plot(data_f$years_exp, salary, main = "Years of Experience VS Salary", xlab = "Y
 boxplot(salary) # No tiny circle spotted in the box plot. No Outliers
 
 #Splitting the data into Train and Test data
-
+set.seed(123) # setting seed for reproducibility
 splt_sample <- sample.split(salary, SplitRatio = 0.60) #Splitting the data into 60:40
 
 train_set  <- subset(data_f, splt_sample == TRUE) #Assigning 60% of data as Training set
